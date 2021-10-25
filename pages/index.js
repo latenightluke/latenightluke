@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { Header } from "./pages/header";
-import GlobalHead from "./pages/global-head/GlobalHead";
+import { Header } from "./header";
+import GlobalHead from "./global-head/GlobalHead";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useLocalStorage } from "./hooks";
+import { useLocalStorage } from "../hooks";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
