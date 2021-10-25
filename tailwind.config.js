@@ -12,6 +12,9 @@ module.exports = {
       colors: {
         black: "#090B10",
         gray: colors.coolGray,
+        blue: {
+          twitter: "#1da1f2",
+        },
       },
     },
   },

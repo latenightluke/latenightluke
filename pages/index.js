@@ -22,13 +22,9 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-black">
           <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-          <main className="flex flex-col items-center justify-center w-full flex-1 text-center text-gray-700 dark:text-gray-200">
+          <main className="flex flex-col items-center justify-center w-full flex-1 text-center text-gray-800 dark:text-gray-200">
             <div className="px-6 pb-6 md:px-10 md:pb-10">
               <h1 className="text-3xl sm:text-5xl font-bold">
-                <FontAwesomeIcon
-                  icon={["far", "city"]}
-                  className="text-indigo-600 mr-2"
-                />
                 Late Night Luke
               </h1>
               <p className="mt-3 text-2 sm:text-2xl">
@@ -105,7 +101,7 @@ export default function Home() {
             </div>
           </main>
 
-          <footer className="flex items-center justify-center w-full py-3 text-gray-700">
+          <footer className="flex items-center justify-center w-full py-3 text-gray-400 dark:text-gray-700">
             &copy; Late Night Luke 2021
           </footer>
         </div>
