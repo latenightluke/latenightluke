@@ -1,82 +1,113 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Logo from "./header/Logo";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black">
       <Head>
-        <title>Create Next App</title>
+        <title>Late Night Luke</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          src="https://kit.fontawesome.com/4258eaa5be.js"
+          crossorigin="anonymous"
+        ></script>
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <header className="flex flex-row items-start justify-between w-full border-b border-gray-800">
+        <a
+          href="/"
+          className="text-4xl font-extrabold italic text-gray-200 px-3 py-2"
+        >
+          <span>
+            <span className="fal fa-moon pr-2 text-yellow-200"></span>
+            LNL
+          </span>
+        </a>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+        <a
+          href="https://github.com/latenightluke"
+          target="_blank"
+          className="px-3 py-2 group"
+        >
+          <button className="rounded-md text-gray-400 hover:text-gray-200 px-2 py-1">
+            <i className="fab fa-github text-2xl"></i>
+          </button>
+        </a>
+      </header>
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
+      <main className="flex flex-col items-center justify-center w-full flex-1 text-center text-gray-200">
+        <div className="p-6 md:p-10">
+          <h1 className="text-3xl sm:text-5xl font-bold">
+            <i className="far fa-city text-indigo-600"></i> Late Night Luke
+          </h1>
+          <p className="mt-3 text-2 sm:text-2xl">
+            Hi, I'm a Front-End Developer/UX Designer based out of Arizona. 🏜
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-around max-w-4xl sm:w-full mb-8">
           <a
             href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+            <h3 className="text-2xl font-bold">
+              Portfolio
+              <i className="far fa-long-arrow-alt-right ml-2"></i>
+            </h3>
             <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
+              Check out some of my past work and greatest acheivements.
             </p>
           </a>
 
           <a
             href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
           >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
+            <h3 className="text-2xl font-bold">
+              Blog
+              <i className="far fa-long-arrow-alt-right ml-2"></i>
+            </h3>
             <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
+              Learn about the frameworks and libraries I love most.
             </p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
           >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
+            <h3 className="text-2xl font-bold">
+              About Me<i className="far fa-long-arrow-alt-right ml-2"></i>
+            </h3>
             <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
+              Learn about the man, the myth, the legend, Mr. Late Night Luke.
             </p>
           </a>
 
           <a
             href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
           >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
+            <h3 className="text-2xl font-bold">
+              Tools & Tech<i className="far fa-long-arrow-alt-right ml-2"></i>
+            </h3>
             <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Learn about my skillset, and my favorite tools and libraries.
             </p>
           </a>
         </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
+      <footer className="flex items-center justify-center w-full h-10 border-gray-800 border-t text-gray-700">
+        &copy; Late Night Luke 2021
       </footer>
     </div>
-  )
+  );
 }

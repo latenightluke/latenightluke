@@ -1,12 +1,22 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "media", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["DM Sans"],
+      },
+      colors: {
+        black: "#090B10",
+        gray: colors.coolGray,
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
