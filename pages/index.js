@@ -43,7 +43,7 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 text-center text-gray-200">
-        <div className="p-6 md:p-10">
+        <div className="px-6 pb-6 md:px-10 md:pb-10">
           <h1 className="text-3xl sm:text-5xl font-bold">
             <i className="far fa-city text-indigo-600"></i> Late Night Luke
           </h1>
