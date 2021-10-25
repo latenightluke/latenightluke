@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Header } from "./header";
-import GlobalHead from "./global-head/GlobalHead";
+import { GlobalHead, Header } from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocalStorage } from "../hooks";
 

@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Switch } from "../../components/forms";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Header({ darkMode, toggleDarkMode }) {
   return (
@@ -33,7 +32,6 @@ export default function Header({ darkMode, toggleDarkMode }) {
               } text-2xl`}
             />
           </button>
-          {/* <Switch value={darkMode} onChange={toggleDarkMode} /> */}
           <a
             href="https://twitter.com/l8nightluke"
             target="_blank"
