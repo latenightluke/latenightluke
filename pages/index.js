@@ -2,6 +2,7 @@ import Head from "next/head";
 import { GlobalHead, Header } from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocalStorage } from "../hooks";
+// import {Link} from "react-router-dom";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
@@ -35,7 +36,8 @@ export default function Home() {
             <div className="flex flex-wrap items-center justify-around max-w-4xl sm:w-full mb-8">
               <a
                 href=""
-                className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
+                className="p-6 mt-6 text-left border-2 w-96 rounded-xl
+                border-gray-700 hover:border-indigo-600 hover:text-indigo-600 focus:text-indigo-600"
               >
                 <h3 className="text-2xl font-bold">
                   Portfolio

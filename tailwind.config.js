@@ -16,6 +16,9 @@ module.exports = {
           twitter: "#1da1f2",
         },
       },
+      backgroundImage: {
+        "late-night": "url('/bg/late-night.jpg')",
+      },
     },
   },
   variants: {
