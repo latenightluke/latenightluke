@@ -1,15 +1,16 @@
 import Head from "next/head";
 import { GlobalHead, Header } from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useLocalStorage } from "../hooks";
+// import { useLocalStorage } from "../hooks";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../app/slices/settings/settingsSlice";
 // import {Link} from "react-router-dom";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
+  const darkMode = useSelector((state) => state.settings.darkMode);
+  const dispatch = useDispatch();
 
-  function toggleDarkMode() {
-    setDarkMode(!darkMode);
-  }
+  // const [darkMode] = useLocalStorage("darkMode", false);
 
   return (
     <>
@@ -20,7 +21,10 @@ export default function Home() {
 
       <div className={darkMode ? "dark " : ""}>
         <div className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-black">
-          <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <Header
+            darkMode={darkMode}
+            toggleDarkMode={() => dispatch(toggleDarkMode())}
+          />
 
           <main className="flex flex-col items-center justify-center w-full flex-1 text-center text-gray-800 dark:text-gray-200">
             <div className="px-6 pb-6 md:px-10 md:pb-10">
