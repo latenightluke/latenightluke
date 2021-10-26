@@ -1,64 +1,55 @@
 import Head from "next/head";
-import { GlobalHead, Header } from "../components/layout";
+import Emoji from "../components/emoji";
+import Layout from "../components/layout";
+import Avatar from "../components/avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { useLocalStorage } from "../hooks";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleDarkMode } from "../app/slices/settings/settingsSlice";
-// import {Link} from "react-router-dom";
 
 export default function Home() {
-  const darkMode = useSelector((state) => state.settings.darkMode);
-  const dispatch = useDispatch();
-
-  // const [darkMode] = useLocalStorage("darkMode", false);
-
   return (
     <>
-      <GlobalHead />
-      <Head>
-        <title>Late Night Luke</title>
-      </Head>
+      <Layout>
+        <Head>
+          <title>Late Night Luke</title>
+        </Head>
+        <div className="flex flex-col items-center justify-center w-full flex-1 text-center text-white dark:text-indigo-400 px-6 pb-6 md:px-10 md:pb-10">
+          <Avatar />
+          <h1 className="text-3xl sm:text-5xl font-bold text-white">
+            Late Night Luke
+          </h1>
+          <p className="mt-3 text-2 sm:text-2xl mb-10">
+            Hi, I'm a Front-End Developer/UX Designer based out of Arizona.{" "}
+            <Emoji symbol="🏜" label="Desert emoji" />
+          </p>
+          <div>
+            <a
+              href="mailto:inquiries@latenightluke.dev"
+              className="px-6 py-2 bg-indigo-600 text-white text-xl rounded-full"
+            >
+              <FontAwesomeIcon icon={["far", "envelope"]} className="mr-4" />
+              Email Me
+            </a>
+          </div>
 
-      <div className={darkMode ? "dark " : ""}>
-        <div className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-black">
-          <Header
-            darkMode={darkMode}
-            toggleDarkMode={() => dispatch(toggleDarkMode())}
-          />
-
-          <main className="flex flex-col items-center justify-center w-full flex-1 text-center text-gray-800 dark:text-gray-200">
-            <div className="px-6 pb-6 md:px-10 md:pb-10">
-              <h1 className="text-3xl sm:text-5xl font-bold">
-                Late Night Luke
-              </h1>
-              <p className="mt-3 text-2 sm:text-2xl">
-                Hi, I'm a Front-End Developer/UX Designer based out of Arizona.
-                🏜
-              </p>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-around max-w-4xl sm:w-full mb-8">
-              <a
-                href=""
-                className="p-6 mt-6 text-left border-2 w-96 rounded-xl
+          <div className="flex flex-wrap items-center justify-around max-w-4xl sm:w-full mb-8">
+            {/* <a
+              href=""
+              className="p-6 mt-6 text-left border-2 w-96 rounded-xl
                 border-gray-700 hover:border-indigo-600 hover:text-indigo-600 focus:text-indigo-600"
-              >
-                <h3 className="text-2xl font-bold">
-                  Portfolio
-                  <FontAwesomeIcon
-                    icon={["far", "long-arrow-alt-right"]}
-                    className="ml-2"
-                  />
-                </h3>
-                <p className="mt-4 text-xl">
-                  Check out some of my past work and greatest acheivements.
-                </p>
-              </a>
+            >
+              <h3 className="text-2xl font-bold">
+                Portfolio
+                <FontAwesomeIcon
+                  icon={["far", "long-arrow-alt-right"]}
+                  className="ml-2"
+                />
+              </h3>
+              <p className="mt-4 text-xl">
+                Check out some of my past work and greatest acheivements.
+              </p>
+            </a>
 
-              <a
-                href=""
-                className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
-              >
+            <Link href="/blog">
+              <a className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600">
                 <h3 className="text-2xl font-bold">
                   Blog
                   <FontAwesomeIcon
@@ -70,47 +61,42 @@ export default function Home() {
                   Learn about the frameworks and libraries I love most.
                 </p>
               </a>
+            </Link>
 
-              <a
-                href=""
-                className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
-              >
-                <h3 className="text-2xl font-bold">
-                  About Me
-                  <FontAwesomeIcon
-                    icon={["far", "long-arrow-alt-right"]}
-                    className="ml-2"
-                  />
-                </h3>
-                <p className="mt-4 text-xl">
-                  Learn about the man, the myth, the legend, Mr. Late Night
-                  Luke.
-                </p>
-              </a>
+            <a
+              href=""
+              className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
+            >
+              <h3 className="text-2xl font-bold">
+                About Me
+                <FontAwesomeIcon
+                  icon={["far", "long-arrow-alt-right"]}
+                  className="ml-2"
+                />
+              </h3>
+              <p className="mt-4 text-xl">
+                Learn about the man, the myth, the legend, Mr. Late Night Luke.
+              </p>
+            </a>
 
-              <a
-                href=""
-                className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
-              >
-                <h3 className="text-2xl font-bold">
-                  Tools & Tech
-                  <FontAwesomeIcon
-                    icon={["far", "long-arrow-alt-right"]}
-                    className="ml-2"
-                  />
-                </h3>
-                <p className="mt-4 text-xl">
-                  Learn about my skillset, and my favorite tools and libraries.
-                </p>
-              </a>
-            </div>
-          </main>
-
-          <footer className="flex items-center justify-center w-full py-3 text-gray-400 dark:text-gray-700">
-            &copy; Late Night Luke 2021
-          </footer>
+            <a
+              href=""
+              className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
+            >
+              <h3 className="text-2xl font-bold">
+                Tools & Tech
+                <FontAwesomeIcon
+                  icon={["far", "long-arrow-alt-right"]}
+                  className="ml-2"
+                />
+              </h3>
+              <p className="mt-4 text-xl">
+                Learn about my skillset, and my favorite tools and libraries.
+              </p>
+            </a> */}
+          </div>
         </div>
-      </div>
+      </Layout>
     </>
   );
 }
