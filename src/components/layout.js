@@ -11,7 +11,7 @@ export default function Layout({ children }) {
     <>
       <Meta />
       <div className={darkMode ? "dark " : ""}>
-        <div className="flex flex-col justify-between min-h-screen bg-gradient-to-b from-black to-indigo-900 dark:bg-gradient-to-b dark:from-pitchBlack dark:to-gray-900">
+        <div className="flex flex-col justify-between min-h-screen bg-gradient-to-b from-pitchBlack via-indigo-900 to-indigo-800 dark:bg-gradient-to-b dark:from-black dark:to-pitchBlack">
           <Header darkMode={darkMode} />
           <main className="mx-auto">{children}</main>
           <Footer />

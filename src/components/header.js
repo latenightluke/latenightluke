@@ -10,42 +10,48 @@ export default function Header({ darkMode }) {
   const dispatch = useDispatch();
 
   return (
-    <header className="flex justify-center w-full">
-      <div className="flex items-center justify-between w-full max-w-screen-2xl">
-        <span>
-          <Logo />
-          <MenuItem to="/portfolio">Portfolio</MenuItem>
-          <MenuItem to="/blog">Blog</MenuItem>
-          <MenuItem to="/tools-and-tech">Tools & Tech</MenuItem>
-        </span>
+    <header className="flex items-center justify-between w-full max-w-screen-2xl">
+      <span className="flex items-center">
+        <Logo />
+        <MenuItem to="/portfolio" icon={["far", "briefcase"]}>
+          Portfolio
+        </MenuItem>
+        <MenuItem to="/blog" icon={["far", "book"]}>
+          Blog
+        </MenuItem>
+        <MenuItem to="/tools-and-tech" icon={["far", "tools"]}>
+          Tools & Tech
+        </MenuItem>
+      </span>
 
-        <span className="flex flex-row items-center">
-          <SocialLink
-            href="https://twitter.com/l8nightluke"
-            icon={["fab", "twitter"]}
+      <span className="flex flex-row items-center">
+        <SocialLink
+          href="https://twitter.com/l8nightluke"
+          icon={["fab", "twitter"]}
+        />
+        <SocialLink
+          href="https://www.linkedin.com/in/luke-ivie/"
+          icon={["fab", "linkedin"]}
+        />
+        <SocialLink
+          href="https://github.com/latenightluke"
+          icon={["fab", "github"]}
+        />
+        <button
+          className="px-3 py-4 rounded-md text-gray-500 dark:text-gray-400"
+          onClick={() => dispatch(toggleDarkMode())}
+        >
+          <FontAwesomeIcon
+            icon={darkMode ? ["far", "lightbulb"] : ["fas", "lightbulb-on"]}
+            fixedWidth
+            className={`${
+              darkMode
+                ? "text-gray-600 hover:text-yellow-300"
+                : "text-yellow-300"
+            } text-2xl`}
           />
-          <SocialLink
-            href="https://www.linkedin.com/in/luke-ivie/"
-            icon={["fab", "linkedin"]}
-          />
-          <SocialLink
-            href="https://github.com/latenightluke"
-            icon={["fab", "github"]}
-          />
-          <button
-            className="px-3 py-4 rounded-md text-gray-500 dark:text-gray-400"
-            onClick={() => dispatch(toggleDarkMode())}
-          >
-            <FontAwesomeIcon
-              icon={["far", darkMode ? "moon" : "sun-haze"]}
-              fixedWidth
-              className={`${
-                darkMode ? "text-yellow-300" : "text-rose-500"
-              } text-2xl`}
-            />
-          </button>
-        </span>
-      </div>
+        </button>
+      </span>
     </header>
   );
 }

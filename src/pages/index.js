@@ -11,19 +11,19 @@ export default function Home() {
         <Head>
           <title>Late Night Luke</title>
         </Head>
-        <div className="flex flex-col items-center justify-center w-full flex-1 text-center text-white dark:text-indigo-400 px-6 pb-6 md:px-10 md:pb-10">
+        <div className="flex flex-col items-center justify-center w-full flex-1 text-center px-6 pb-6 md:px-10 md:pb-10">
           <Avatar />
           <h1 className="text-3xl sm:text-5xl font-bold text-white">
             Late Night Luke
           </h1>
-          <p className="mt-3 text-2 sm:text-2xl mb-10">
+          <p className="mt-3 text-2 sm:text-2xl mb-10 text-indigo-100 dark:text-white">
             Hi, I'm a Front-End Developer/UX Designer based out of Arizona.{" "}
             <Emoji symbol="🏜" label="Desert emoji" />
           </p>
           <div>
             <a
               href="mailto:inquiries@latenightluke.dev"
-              className="px-6 py-2 bg-indigo-600 text-white text-xl rounded-full"
+              className="px-6 py-2 bg-indigo-200 hover:bg-indigo-300 active:bg-indigo-400 dark:bg-yellow-300 dark:hover:bg-amber-200 dark:active:bg-yellow-300 text-indigo-900 hover:text-black dark:text-black text-xl rounded-full"
             >
               <FontAwesomeIcon icon={["far", "envelope"]} className="mr-4" />
               Email Me

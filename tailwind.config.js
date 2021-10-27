@@ -25,7 +25,11 @@ module.exports = {
         gray: colors.coolGray,
         blue: {
           twitter: "#1da1f2",
+          ...colors.blue,
         },
+        amber: colors.amber,
+        teal: colors.teal,
+        orange: colors.orange,
         rose: colors.rose,
       },
       backgroundImage: {
