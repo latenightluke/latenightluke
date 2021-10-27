@@ -17,13 +17,13 @@ export default function Home() {
             Late Night Luke
           </h1>
           <p className="mt-3 text-2 sm:text-2xl mb-10 text-indigo-100 dark:text-white">
-            Hi, I'm a Front-End Developer/UX Designer based out of Arizona.{" "}
-            <Emoji symbol="🏜" label="Desert emoji" />
+            Hi, I'm a Front-End Developer/UX Designer based out of sunny
+            Arizona. <Emoji symbol="🏜" label="Desert emoji" />
           </p>
           <div>
             <a
               href="mailto:inquiries@latenightluke.dev"
-              className="px-6 py-2 bg-indigo-200 hover:bg-indigo-300 active:bg-indigo-400 dark:bg-yellow-300 dark:hover:bg-amber-200 dark:active:bg-yellow-300 text-indigo-900 hover:text-black dark:text-black text-xl rounded-full"
+              className="px-6 py-2 bg-indigo-300 hover:bg-indigo-300 active:bg-indigo-400  text-black hover:text-black text-xl rounded-full" // dark:bg-green-300 dark:hover:bg-green-400 dark:active:bg-green-300 dark:text-black
             >
               <FontAwesomeIcon icon={["far", "envelope"]} className="mr-4" />
               Email Me

@@ -10,7 +10,7 @@ export default function MenuItem({ children, icon, to }) {
   return (
     <Link href={to}>
       <a className="group text-xl px-5">
-        {icon && (
+        {/* {icon && (
           <FontAwesomeIcon
             icon={icon}
             className={`mr-2 ${
@@ -19,12 +19,12 @@ export default function MenuItem({ children, icon, to }) {
                 : "text-gray-700 group-hover:text-gray-500"
             }`}
           />
-        )}
+        )} */}
         <span
           className={`${
             active
               ? "text-white"
-              : "text-gray-400 group-hover:text-white dark:text-gray-500 dark:group-hover:text-white"
+              : "text-gray-400 group-hover:text-indigo-400 dark:text-gray-500 dark:group-hover:text-indigo-400"
           }`}
         >
           {children}

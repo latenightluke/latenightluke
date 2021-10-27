@@ -27,6 +27,7 @@ module.exports = {
           twitter: "#1da1f2",
           ...colors.blue,
         },
+        sky: colors.sky,
         amber: colors.amber,
         teal: colors.teal,
         orange: colors.orange,
