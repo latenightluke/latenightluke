@@ -36,6 +36,9 @@ module.exports = {
       backgroundImage: {
         "late-night": "url('/bg/late-night.jpg')",
       },
+      screens: {
+        sm: "390px",
+      },
     },
   },
   variants: {

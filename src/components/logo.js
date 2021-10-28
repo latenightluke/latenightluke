@@ -7,13 +7,15 @@ export default function logo() {
     <Link href="/">
       <a
         href="/"
-        className="items-center inline-flex text-white dark:text-gray-200 px-3 py-2"
+        className="inline-flex items-center text-gray-900 dark:text-white px-3 py-4 lg:py-4"
       >
         <FontAwesomeIcon
-          icon={["fas", "saxophone"]}
-          className="mr-2 text-yellow-300 text-2xl"
+          icon={["fas", "city"]}
+          className="mr-3 text-indigo-400 text-2xl"
         />
-        <span className="font-extrabold italic text-2xl">Late Night</span>
+        <span className="hidden sm:inline-block font-extrabold italic text-3xl">
+          LNL
+        </span>
       </a>
     </Link>
   );

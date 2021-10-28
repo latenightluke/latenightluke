@@ -9,26 +9,14 @@ export default function MenuItem({ children, icon, to }) {
 
   return (
     <Link href={to}>
-      <a className="group text-xl px-5">
-        {/* {icon && (
-          <FontAwesomeIcon
-            icon={icon}
-            className={`mr-2 ${
-              active
-                ? "text-indigo-400"
-                : "text-gray-700 group-hover:text-gray-500"
-            }`}
-          />
-        )} */}
-        <span
-          className={`${
-            active
-              ? "text-white"
-              : "text-gray-400 group-hover:text-indigo-400 dark:text-gray-500 dark:group-hover:text-indigo-400"
-          }`}
-        >
-          {children}
-        </span>
+      <a
+        className={`${
+          active
+            ? "text-indigo-400"
+            : "text-gray-600 hover:text-indigo-400 dark:text-gray-600 dark:hover:text-gray-400 dark:active:text-indigo-400"
+        } text-xl px-5 py-4`}
+      >
+        <span>{children}</span>
       </a>
     </Link>
   );

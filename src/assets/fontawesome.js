@@ -5,6 +5,10 @@ import {
   faSunHaze as fasSunHaze,
   faLightbulb as fasLightbulb,
   faLightbulbOn as fasLightbulbOn,
+  faCity as fasCity,
+  faHouse as fasHouse,
+  faBriefcase as fasBriefcase,
+  faTools as fasTools,
 } from "@fortawesome/pro-solid-svg-icons";
 import {
   faLongArrowAltRight,
@@ -16,13 +20,19 @@ import {
   faSunglasses,
   faEnvelope,
   faBuilding,
-  faBriefcase,
   faBlog,
   faTools,
   faBook,
   faLightbulb,
+  faLongArrowRight,
+  faLongArrowLeft,
+  faInfoCircle,
 } from "@fortawesome/pro-regular-svg-icons";
-import {} from "@fortawesome/pro-light-svg-icons";
+import {
+  faHouse as falHouse,
+  faBriefcase as falBriefcase,
+  faTools as falTools,
+} from "@fortawesome/pro-light-svg-icons";
 import {
   faGithub,
   faTwitter,
@@ -30,12 +40,21 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
+  fasTools,
+  falTools,
+  fasBriefcase,
+  falBriefcase,
+  fasHouse,
+  falHouse,
+  faInfoCircle,
+  fasCity,
+  faLongArrowRight,
+  faLongArrowLeft,
   faLightbulb,
   fasLightbulb,
   fasLightbulbOn,
   faBook,
   faTools,
-  faBriefcase,
   faBlog,
   faMoon,
   fasMoon,
