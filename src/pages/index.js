@@ -21,7 +21,7 @@ export default function Home() {
             Hi, I'm a Front-End Developer/UX Designer based out of Arizona.{" "}
             <Emoji symbol="🏜" label="Desert emoji" />
           </Subhead>
-          <div className="flex flex-col items-center justify-center lg:flex-row bg-lateNightLukeOg">
+          <div className="flex flex-col items-center justify-center lg:flex-row">
             <Button
               href="mailto:inquiries@latenightluke.dev"
               icon={["far", "envelope"]}

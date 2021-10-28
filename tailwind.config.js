@@ -1,6 +1,6 @@
 const colors = require("tailwindcss/colors");
-
 const prodUrl = "https://www.latenightluke.dev";
+
 module.exports = {
   mode: "jit",
   purge: [
@@ -30,10 +30,9 @@ module.exports = {
         indigo: colors.indigo,
       },
       backgroundImage: {
-        lateNight: `url('${prodUrl}/bg/late-night.jpg')`,
-        lateNightLukeOg: `url('${prodUrl}/bg/latenightluke-og.png')`,
-        youngLukeMusicOg: `url('${prodUrl}/bg/younglukemusic-og.png')`,
-        openforceOg: `url('${prodUrl}/bg/openforce-og.png')`,
+        latenightluke: `url('${prodUrl}/bg/latenightluke-og.png')`,
+        younglukemusic: `url('${prodUrl}/bg/younglukemusic-og.png')`,
+        openforce: `url('${prodUrl}/bg/openforce-og.png')`,
       },
       screens: {
         xs: "390px",
