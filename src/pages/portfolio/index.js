@@ -20,7 +20,7 @@ export default function index() {
       </Head>
 
       <div>
-        <div className="max-w-screen-lg mx-auto pt-20 px-4">
+        <div className="max-w-screen-lg mx-auto pt-6 pb-6 lg:pt-20 px-6">
           <div className="text-center">
             <PageTitle>Skills</PageTitle>
             <Subhead className="mb-4">
@@ -34,7 +34,7 @@ export default function index() {
           </div>
         </div>
 
-        <div className="max-w-screen-xl mx-auto pt-20 px-4">
+        <div className="max-w-screen-xl mx-auto pt-6 lg:pt-20 px-6">
           <div className="flex flex-col">
             <div className="text-center">
               <PageTitle>Projects</PageTitle>
@@ -59,7 +59,7 @@ export default function index() {
           </div>
         </div>
 
-        <div className="max-w-screen-xl mx-auto pt-20 px-4">
+        <div className="max-w-screen-xl mx-auto pt-6 lg:pt-20 px-6 lg:mb-28">
           <div className="flex flex-col">
             <div className="text-center">
               <PageTitle>Graphic Work</PageTitle>
@@ -68,51 +68,31 @@ export default function index() {
                 <a href="https://discountmags.com">DiscountMags.com</a>.
               </Subhead>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              <GraphicCard
-                src="/portfolio/graphics/1.gif"
-                width={1200}
-                height={3100}
-              />
-              <GraphicCard
-                src="/portfolio/graphics/2.gif"
-                width={1200}
-                height={2292}
-              />
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              <GraphicCard src="/graphics/1.gif" width={1200} height={3100} />
+              <GraphicCard src="/graphics/2.gif" width={1200} height={2292} />
               <GraphicCardMultiple
                 srcs={[
                   {
-                    src: "/portfolio/graphics/3-1.png",
+                    src: "/graphics/3-1.png",
                     width: 1200,
                     height: 256,
                   },
                   {
-                    src: "/portfolio/graphics/3-2.gif",
+                    src: "/graphics/3-2.gif",
                     width: 1200,
                     height: 1376,
                   },
                   {
-                    src: "/portfolio/graphics/3-3.png",
+                    src: "/graphics/3-3.png",
                     width: 1200,
                     height: 1232,
                   },
                 ]}
               />
-              <GraphicCard
-                src="/portfolio/graphics/5.gif"
-                width={1200}
-                height={1910}
-              />
-              <GraphicCard
-                src="/portfolio/graphics/7.png"
-                width={1200}
-                height={2054}
-              />
-              <GraphicCard
-                src="/portfolio/graphics/8.png"
-                width={1200}
-                height={2304}
-              />
+              <GraphicCard src="/graphics/5.gif" width={1200} height={1910} />
+              <GraphicCard src="/graphics/7.png" width={1200} height={2054} />
+              <GraphicCard src="/graphics/8.png" width={1200} height={2304} />
             </div>
           </div>
         </div>
@@ -194,14 +174,14 @@ const PortfolioCard = ({
 
 const GraphicCard = ({ src, width, height, className }) => {
   return (
-    <div className={className + " float-left mb-4 mr-4"}>
+    <div className={className}>
       <Image src={src} width={width} height={height} />
     </div>
   );
 };
 const GraphicCardMultiple = ({ srcs, className }) => {
   return (
-    <div className={className + " float-left mb-4 mr-4"}>
+    <div className={className}>
       {srcs?.map((src) => (
         <img src={src.src} width={src.width} height={src.height} />
       ))}

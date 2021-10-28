@@ -21,7 +21,7 @@ export default function Home() {
             Hi, I'm a Front-End Developer/UX Designer based out of Arizona.{" "}
             <Emoji symbol="🏜" label="Desert emoji" />
           </Subhead>
-          <div className="flex flex-col items-center justify-center lg:flex-row">
+          <div className="flex flex-col items-center justify-center lg:flex-row bg-lateNightLukeOg">
             <Button
               href="mailto:inquiries@latenightluke.dev"
               icon={["far", "envelope"]}
@@ -55,7 +55,6 @@ const Button = ({
   children,
   ...rest
 }) => {
-  console.log({ className });
   const buttonClasses = `group px-6 py-2 bg-black active:bg-black dark:bg-indigo-400 dark:hover:bg-indigo-500 dark:active:bg-indigo-400 text-xl rounded-full ${className}`;
 
   if (link && !external) {

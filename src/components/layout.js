@@ -16,7 +16,7 @@ export default function Layout({ children }) {
       <div className={darkMode ? "dark " : ""}>
         <div className="flex flex-col items-center justify-between min-h-screen bg-indigo-600 dark:bg-black transition-colors duration-200 ease-linear">
           <Header menuItems={menuItems} darkMode={darkMode} />
-          <main className="w-full h-full pt-8 pb-20 lg:pt-0 lg:pb-0">
+          <main className="w-full h-full pb-16 lg:pt-0 lg:pb-0">
             {children}
           </main>
           <MobileFooter menuItems={menuItems} />

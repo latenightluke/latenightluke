@@ -8,7 +8,6 @@ export default function MenuItem({ children, icon, to }) {
 
   const active =
     to !== "/" ? router.pathname.includes(to) : router.pathname === to;
-  console.log(router.pathname);
 
   return (
     <Link href={to}>

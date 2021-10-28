@@ -1,12 +1,13 @@
 const colors = require("tailwindcss/colors");
 
+const prodUrl = "https://www.latenightluke.dev";
 module.exports = {
   mode: "jit",
   purge: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class", // or 'media' or 'class'
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -29,10 +30,10 @@ module.exports = {
         indigo: colors.indigo,
       },
       backgroundImage: {
-        "late-night": "url('/bg/late-night.jpg')",
-        "portfolio-latenightluke": "url('/portfolio/latenightluke-og.png')",
-        "portfolio-younglukemusic": "url('/portfolio/younglukemusic-og.png')",
-        "portfolio-openforce": "url('/portfolio/openforce-og.png')",
+        lateNight: `url('${prodUrl}/bg/late-night.jpg')`,
+        lateNightLukeOg: `url('${prodUrl}/bg/latenightluke-og.png')`,
+        youngLukeMusicOg: `url('${prodUrl}/bg/younglukemusic-og.png')`,
+        openforceOg: `url('${prodUrl}/bg/openforce-og.png')`,
       },
       screens: {
         xs: "390px",
