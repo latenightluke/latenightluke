@@ -5,7 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function MenuItem({ children, icon, to }) {
   const router = useRouter();
-  const active = router.pathname === to;
+
+  const active =
+    to !== "/" ? router.pathname.includes(to) : router.pathname === to;
+  console.log(router.pathname);
 
   return (
     <Link href={to}>
@@ -13,10 +16,16 @@ export default function MenuItem({ children, icon, to }) {
         className={`${
           active
             ? "text-indigo-400"
-            : "text-gray-600 hover:text-indigo-400 dark:text-gray-600 dark:hover:text-gray-400 dark:active:text-indigo-400"
+            : "text-gray-600 hover:text-gray-400 active:text-indigo-400"
         } text-xl px-5 py-4`}
       >
-        <span>{children}</span>
+        {icon && (
+          <FontAwesomeIcon
+            icon={[active ? "fas" : "fal", icon]}
+            className="mr-2"
+          />
+        )}
+        <span className="hidden lg:inline-flex">{children}</span>
       </a>
     </Link>
   );

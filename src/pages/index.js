@@ -1,7 +1,10 @@
 import Head from "next/head";
+import Link from "next/link";
 import Emoji from "../components/emoji";
 import Layout from "../components/layout";
 import Avatar from "../components/avatar";
+import Title from "../components/title";
+import Subhead from "../components/subhead";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
@@ -13,90 +16,89 @@ export default function Home() {
         </Head>
         <div className="flex flex-col items-center justify-center w-full flex-1 text-center px-6 pb-6 md:px-10 md:pb-10">
           <Avatar />
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-200">
-            Late Night Luke
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mt-3 mb-10 text-gray-600 dark:text-white">
+          <Title>Late Night Luke</Title>
+          <Subhead>
             Hi, I'm a Front-End Developer/UX Designer based out of Arizona.{" "}
             <Emoji symbol="🏜" label="Desert emoji" />
-          </p>
-          <div>
-            <a
+          </Subhead>
+          <div className="flex flex-col items-center justify-center lg:flex-row">
+            <Button
               href="mailto:inquiries@latenightluke.dev"
-              className="px-6 py-2 bg-indigo-400 hover:bg-indigo-500 active:bg-indigo-400  text-black hover:text-black text-xl rounded-full" // dark:bg-green-300 dark:hover:bg-green-400 dark:active:bg-green-300 dark:text-black
+              icon={["far", "envelope"]}
+              className="mb-3 mr-3"
+              link
+              external
             >
-              <FontAwesomeIcon icon={["far", "envelope"]} className="mr-4" />
               Email Me
-            </a>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-around max-w-4xl sm:w-full mb-8">
-            {/* <a
-              href=""
-              className="p-6 mt-6 text-left border-2 w-96 rounded-xl
-                border-gray-700 hover:border-indigo-600 hover:text-indigo-600 focus:text-indigo-600"
+            </Button>
+            <Button
+              href="/portfolio"
+              icon={["far", "briefcase"]}
+              link
+              className="mb-3"
             >
-              <h3 className="text-2xl font-bold">
-                Portfolio
-                <FontAwesomeIcon
-                  icon={["far", "long-arrow-alt-right"]}
-                  className="ml-2"
-                />
-              </h3>
-              <p className="mt-4 text-xl">
-                Check out some of my past work and greatest acheivements.
-              </p>
-            </a>
-
-            <Link href="/blog">
-              <a className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600">
-                <h3 className="text-2xl font-bold">
-                  Blog
-                  <FontAwesomeIcon
-                    icon={["far", "long-arrow-alt-right"]}
-                    className="ml-2"
-                  />
-                </h3>
-                <p className="mt-4 text-xl">
-                  Learn about the frameworks and libraries I love most.
-                </p>
-              </a>
-            </Link>
-
-            <a
-              href=""
-              className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
-            >
-              <h3 className="text-2xl font-bold">
-                About Me
-                <FontAwesomeIcon
-                  icon={["far", "long-arrow-alt-right"]}
-                  className="ml-2"
-                />
-              </h3>
-              <p className="mt-4 text-xl">
-                Learn about the man, the myth, the legend, Mr. Late Night Luke.
-              </p>
-            </a>
-
-            <a
-              href=""
-              className="p-6 mt-6 text-left border-gray-700 hover:border-indigo-600 border-2 w-96 rounded-xl hover:text-indigo-600 focus:text-indigo-600"
-            >
-              <h3 className="text-2xl font-bold">
-                Tools & Tech
-                <FontAwesomeIcon
-                  icon={["far", "long-arrow-alt-right"]}
-                  className="ml-2"
-                />
-              </h3>
-              <p className="mt-4 text-xl">
-                Learn about my skillset, and my favorite tools and libraries.
-              </p>
-            </a> */}
+              See My Work
+            </Button>
           </div>
         </div>
       </Layout>
     </>
   );
 }
+
+const Button = ({
+  href,
+  link,
+  icon,
+  external,
+  className,
+  children,
+  ...rest
+}) => {
+  console.log({ className });
+  const buttonClasses = `group px-6 py-2 bg-black active:bg-black dark:bg-indigo-400 dark:hover:bg-indigo-500 dark:active:bg-indigo-400 text-xl rounded-full ${className}`;
+
+  if (link && !external) {
+    return (
+      <Link href={href}>
+        <a className={buttonClasses} {...rest}>
+          <Text icon={icon} external={external}>
+            {children}
+          </Text>
+        </a>
+      </Link>
+    );
+  } else if (link && external) {
+    return (
+      <a className={buttonClasses} href={href} target="_blank" {...rest}>
+        <Text icon={icon} external={external}>
+          {children}
+        </Text>
+      </a>
+    );
+  } else {
+    return (
+      <button className={buttonClasses} {...rest}>
+        <Text icon={icon} external={external}>
+          {children}
+        </Text>
+      </button>
+    );
+  }
+};
+
+const Text = ({ icon, external, children }) => (
+  <div className="flex items-center justify-center">
+    <FontAwesomeIcon
+      icon={icon}
+      className="mr-4 text-indigo-400 dark:text-black"
+    />
+    <span className="text-white dark:text-black">{children}</span>
+    {!external && (
+      <FontAwesomeIcon
+        icon={["far", "long-arrow-right"]}
+        className="text-white dark:text-black ml-2 transition-all ease-in-out duration-200 group-hover:ml-4 group-active:duration-100 group-active:ml-2"
+      />
+    )}
+  </div>
+);

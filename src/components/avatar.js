@@ -4,7 +4,7 @@ import avatar from "../../public/avatar/luke.jpg";
 
 export default function Avatar() {
   return (
-    <div className="h-32 w-32 flex items-center justify-center rounded-full overflow-hidden mb-4 border-4 dark:border-2 border-indigo-400">
+    <div className="h-36 w-36 flex items-center justify-center rounded-full overflow-hidden mb-4 border-4 border-indigo-400">
       <Image src={avatar}></Image>
     </div>
   );

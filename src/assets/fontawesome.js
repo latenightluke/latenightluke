@@ -27,6 +27,8 @@ import {
   faLongArrowRight,
   faLongArrowLeft,
   faInfoCircle,
+  faExternalLink,
+  faBriefcase,
 } from "@fortawesome/pro-regular-svg-icons";
 import {
   faHouse as falHouse,
@@ -40,9 +42,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
+  faExternalLink,
   fasTools,
   falTools,
   fasBriefcase,
+  faBriefcase,
   falBriefcase,
   fasHouse,
   falHouse,

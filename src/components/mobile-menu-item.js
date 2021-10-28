@@ -19,7 +19,7 @@ export default function MobileMenuItem({ children, icon, to }) {
           } text-2xl mb-2`}
         />
         <span
-          className={`text-md ${
+          className={`text-base ${
             active ? "text-white" : "text-gray-600 group-hover:text-gray-400"
           }`}
         >

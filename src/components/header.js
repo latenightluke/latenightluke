@@ -4,17 +4,17 @@ import { useDispatch } from "react-redux";
 import { toggleDarkMode } from "../app/slices/settings/settingsSlice";
 import Logo from "./logo";
 import MenuItem from "./menu-item";
-import SocialLink from "./social-link";
+import SocialIcon from "./social-icon";
 
 export default function Header({ darkMode, menuItems }) {
   return (
-    <header className="bg-white dark:bg-black border-b-2 border-gray-200 dark:border-gray-800 w-full">
+    <header className="bg-black dark:bg-black border-b-2 border-black dark:border-gray-800 w-full">
       <div className="flex justify-between lg:grid lg:grid-cols-3 max-w-screen-2xl mx-auto py-2 px-4">
         <span className="hidden lg:flex items-center justify-start">
           <DarkModeButton darkMode={darkMode} />
           <span className="hidden lg:inline-block">
             {menuItems?.map((item) => (
-              <MenuItem to={item?.pathname} icon={item?.icon}>
+              <MenuItem key={item?.name} to={item?.pathname} icon={item?.icon}>
                 {item?.name}
               </MenuItem>
             ))}
@@ -26,15 +26,15 @@ export default function Header({ darkMode, menuItems }) {
         </span>
 
         <span className="flex items-center justify-end">
-          <SocialLink
+          <SocialIcon
             href="https://twitter.com/l8nightluke"
             icon={["fab", "twitter"]}
           />
-          <SocialLink
+          <SocialIcon
             href="https://www.linkedin.com/in/luke-ivie/"
             icon={["fab", "linkedin"]}
           />
-          <SocialLink
+          <SocialIcon
             href="https://github.com/latenightluke"
             icon={["fab", "github"]}
           />
@@ -59,7 +59,7 @@ const DarkModeButton = ({ darkMode, className }) => {
         className={`${
           darkMode
             ? "text-gray-600 group-hover:text-yellow-300"
-            : "text-amber-500"
+            : "text-yellow-300"
         } text-2xl`}
       />
     </button>

@@ -25,19 +25,20 @@ module.exports = {
         gray: colors.coolGray,
         blue: {
           twitter: "#1da1f2",
-          ...colors.blue,
         },
-        sky: colors.sky,
-        amber: colors.amber,
-        teal: colors.teal,
-        orange: colors.orange,
-        rose: colors.rose,
+        indigo: colors.indigo,
       },
       backgroundImage: {
         "late-night": "url('/bg/late-night.jpg')",
+        "portfolio-projects-latenightluke":
+          "url('/portfolio/projects/latenightluke-og.png')",
+        "portfolio-projects-younglukemusic":
+          "url('/portfolio/projects/younglukemusic-og.png')",
+        "portfolio-projects-openforce":
+          "url('/portfolio/projects/openforce-og.png')",
       },
       screens: {
-        sm: "390px",
+        xs: "390px",
       },
     },
   },
