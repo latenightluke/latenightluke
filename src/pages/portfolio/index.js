@@ -10,7 +10,7 @@ export default function index() {
         <title>Portfolio | Late Night Luke</title>
       </Head>
 
-      <h1 className="text-3xl text-center text-white font-bold mb-1">
+      <h1 className="text-3xl text-center text-gray-900 dark:text-white font-bold mb-1">
         Portfolio
       </h1>
       <div className="flex flex-col max-w-screen-xl mx-auto p-6">
