@@ -30,12 +30,9 @@ module.exports = {
       },
       backgroundImage: {
         "late-night": "url('/bg/late-night.jpg')",
-        "portfolio-projects-latenightluke":
-          "url('/portfolio/projects/latenightluke-og.png')",
-        "portfolio-projects-younglukemusic":
-          "url('/portfolio/projects/younglukemusic-og.png')",
-        "portfolio-projects-openforce":
-          "url('/portfolio/projects/openforce-og.png')",
+        "portfolio-latenightluke": "url('/portfolio/latenightluke-og.png')",
+        "portfolio-younglukemusic": "url('/portfolio/younglukemusic-og.png')",
+        "portfolio-openforce": "url('/portfolio/openforce-og.png')",
       },
       screens: {
         xs: "390px",

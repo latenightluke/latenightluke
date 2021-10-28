@@ -45,6 +45,7 @@ export default function index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects?.map((project) => (
                 <PortfolioCard
+                  key={project?.title}
                   title={project?.title}
                   badge={project?.badge}
                   isMainBadge={project?.isMainBadge}
@@ -120,23 +121,6 @@ export default function index() {
   );
 }
 
-const GraphicCard = ({ src, width, height, className }) => {
-  return (
-    <div className={className + " float-left mb-4 mr-4"}>
-      <Image src={src} width={width} height={height} />
-    </div>
-  );
-};
-const GraphicCardMultiple = ({ srcs, className }) => {
-  return (
-    <div className={className + " float-left mb-4 mr-4"}>
-      {srcs?.map((src) => (
-        <img src={src.src} width={src.width} height={src.height} />
-      ))}
-    </div>
-  );
-};
-
 const PortfolioCard = ({
   title,
   badge,
@@ -148,7 +132,7 @@ const PortfolioCard = ({
   githubLink,
 }) => {
   return (
-    <div className="rounded-lg overflow-hidden border-2 border-black dark:border-2 dark:border-indigo-400 bg-white">
+    <div className="rounded-lg overflow-hidden border-2 border-black dark:border-2 dark:border-indigo-400 bg-indigo-900">
       <div className="flex flex-col">
         <a
           href={siteLink}
@@ -204,6 +188,23 @@ const PortfolioCard = ({
           </span>
         </div>
       </div>
+    </div>
+  );
+};
+
+const GraphicCard = ({ src, width, height, className }) => {
+  return (
+    <div className={className + " float-left mb-4 mr-4"}>
+      <Image src={src} width={width} height={height} />
+    </div>
+  );
+};
+const GraphicCardMultiple = ({ srcs, className }) => {
+  return (
+    <div className={className + " float-left mb-4 mr-4"}>
+      {srcs?.map((src) => (
+        <img src={src.src} width={src.width} height={src.height} />
+      ))}
     </div>
   );
 };
