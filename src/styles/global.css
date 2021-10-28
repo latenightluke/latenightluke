@@ -6,3 +6,15 @@
   background: #ffffff;
   color: #000000;
 }
+
+.bg-latenightluke {
+  background-image: url("/bg/latenightluke-og.png") !important;
+}
+
+.bg-younglukemusic {
+  background-image: url("/bg/younglukemusic-og.png") !important;
+}
+
+.bg-openforce {
+  background-image: url("/bg/openforce-og.png") !important;
+}

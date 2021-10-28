@@ -183,7 +183,12 @@ const GraphicCardMultiple = ({ srcs, className }) => {
   return (
     <div className={className}>
       {srcs?.map((src) => (
-        <img src={src.src} width={src.width} height={src.height} />
+        <img
+          key={src.src}
+          src={src.src}
+          width={src.width}
+          height={src.height}
+        />
       ))}
     </div>
   );

@@ -28,11 +28,6 @@ module.exports = {
         },
         indigo: colors.indigo,
       },
-      backgroundImage: {
-        latenightluke: `url('/bg/latenightluke-og.png')`,
-        younglukemusic: `url('/bg/younglukemusic-og.png')`,
-        openforce: `url('/bg/openforce-og.png')`,
-      },
       screens: {
         xs: "390px",
       },
