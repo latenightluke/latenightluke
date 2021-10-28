@@ -14,7 +14,7 @@ export default function Home() {
         <Head>
           <title>Late Night Luke</title>
         </Head>
-        <div className="flex flex-col items-center justify-center w-full flex-1 text-center px-6 pb-6 md:px-10 md:pb-10">
+        <div className="flex flex-col items-center justify-center w-full flex-1 text-center pt-6 px-6 pb-20 md:px-10 md:pb-10 h-full">
           <Avatar />
           <Title>Late Night Luke</Title>
           <Subhead>
