@@ -6,7 +6,7 @@ export default function SocialIcon({ href, icon, className }) {
     <a
       href={href}
       target="_blank"
-      className={`px-3 py-4 cursor-pointer ${
+      className={`px-2 py-4 cursor-pointer ${
         className
           ? className
           : "text-gray-600 hover:text-gray-400 active:text-indigo-400"

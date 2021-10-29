@@ -55,7 +55,7 @@ const Button = ({
   children,
   ...rest
 }) => {
-  const buttonClasses = `group px-6 py-2 bg-black active:bg-black dark:bg-indigo-400 dark:hover:bg-indigo-500 dark:active:bg-indigo-400 text-xl rounded-full ${className}`;
+  const buttonClasses = `px-6 py-2 bg-black active:bg-black dark:bg-indigo-600 dark:hover:bg-indigo-500 dark:active:bg-indigo-600 text-xl rounded-full ${className}`;
 
   if (link && !external) {
     return (
@@ -87,16 +87,16 @@ const Button = ({
 };
 
 const Text = ({ icon, external, children }) => (
-  <div className="flex items-center justify-center">
+  <div className="group flex items-center justify-center">
     <FontAwesomeIcon
       icon={icon}
-      className="mr-4 text-indigo-400 dark:text-black"
+      className="mr-4 text-indigo-400 dark:text-white"
     />
-    <span className="text-white dark:text-black">{children}</span>
+    <span className="text-white dark:text-white">{children}</span>
     {!external && (
       <FontAwesomeIcon
         icon={["far", "long-arrow-right"]}
-        className="text-white dark:text-black ml-2 transition-all ease-in-out duration-200 group-hover:ml-4 group-active:duration-100 group-active:ml-2"
+        className="text-white dark:text-white ml-2 transition-all ease-in-out duration-200 group-hover:ml-4 group-active:duration-100 group-active:ml-2"
       />
     )}
   </div>

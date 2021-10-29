@@ -10,20 +10,27 @@ export default function useProjects() {
       githubLink: "https://github.com/latenightluke/latenightluke",
     },
     {
+      title: "Openforce",
+      badge: "Website",
+      showSiteLinkIcon: true,
+      technologies: "Wordpress • Bootstrap 4",
+      bgClassName: "bg-openforce",
+      siteLink: "https://oforce.com",
+    },
+    {
+      title: "Tanga Redesign",
+      badge: "Website",
+      technologies: "React • Bootstrap 4",
+      bgClassName: "bg-tangaredesign",
+      siteLink: "https://911fosterpets.com/",
+    },
+    {
       title: "Young Luke",
       badge: "Website",
       technologies: "S3 • React • Bootstrap 4",
       bgClassName: "bg-younglukemusic",
       siteLink: "https://younglukemusic.com",
       githubLink: "https://github.com/latenightluke/younglukemusic",
-    },
-    {
-      title: "Openforce",
-      badge: "Website",
-      showSiteLinkIcon: true,
-      technologies: "Wordpress • Avada Theme • Bootstrap 4",
-      bgClassName: "bg-openforce",
-      siteLink: "https://oforce.com",
     },
     {
       title: "YL Pool Party",
@@ -34,16 +41,9 @@ export default function useProjects() {
     },
     {
       title: "911FosterPets",
-      badge: "Website & Web Application",
+      badge: "Website & Web App",
       technologies: "React • Bootstrap 4",
       bgClassName: "bg-911fosterpets",
-      siteLink: "https://911fosterpets.com/",
-    },
-    {
-      title: "Tanga Redesign",
-      badge: "Website, UX",
-      technologies: "React • Bootstrap 4",
-      bgClassName: "bg-tangaredesign",
       siteLink: "https://911fosterpets.com/",
     },
   ];

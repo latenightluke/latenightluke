@@ -21,7 +21,7 @@ export default function MenuItem({ children, icon, to }) {
         {icon && (
           <FontAwesomeIcon
             icon={[active ? "fas" : "fal", icon]}
-            className="mr-2"
+            className="mr-2 hidden xl:inline-block"
           />
         )}
         <span className="hidden lg:inline-flex">{children}</span>

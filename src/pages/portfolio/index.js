@@ -22,7 +22,7 @@ export default function index() {
       <div>
         <div className="max-w-screen-lg mx-auto pt-6 pb-6 lg:pt-20 px-6">
           <div className="text-center">
-            <PageTitle>Skills</PageTitle>
+            <PageTitle>Qualifications</PageTitle>
             <Subhead className="mb-4">
               A range of technologies and tools I am well-versed in.
             </Subhead>
@@ -64,8 +64,7 @@ export default function index() {
             <div className="text-center">
               <PageTitle>Graphic Work</PageTitle>
               <Subhead>
-                Some highlights from my email graphic work over the years for{" "}
-                <a href="https://discountmags.com">DiscountMags.com</a>.
+                Some highlights from my email graphic work over the years.
               </Subhead>
             </div>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
@@ -114,24 +113,25 @@ const PortfolioCard = ({
   return (
     <div className="rounded-lg overflow-hidden border-2 border-black dark:border-2 dark:border-indigo-400 bg-indigo-900">
       <div className="flex flex-col">
-        <a
-          href={siteLink}
-          target="_blank"
-          className={`group h-52 flex items-center justify-center ${bgClassName} bg-cover bg-center`}
-        >
-          <div className="flex items-center justify-center bg-black w-full h-full bg-opacity-0 group-hover:bg-opacity-80">
-            <button
+        <div className={`group h-52 ${bgClassName} bg-cover bg-center`}>
+          <div className="hidden lg:flex items-center justify-center bg-black w-full h-full bg-opacity-0 group-hover:bg-opacity-90">
+            <a
+              href={siteLink}
+              target="_blank"
               icon={["far", "external-link"]}
-              className="hidden group-hover:flex items-center justify-center text-white dark:text-black rounded-full bg-indigo-600 dark:bg-indigo-400 px-6 py-2"
+              className="opacity-0 lg:group-hover:opacity-100 items-center justify-center rounded-full px-6 py-2
+              border-2 border-indigo-400
+              text-indigo-400 hover:text-black
+              bg-transparent hover:bg-indigo-400"
             >
               Visit Site
               <FontAwesomeIcon
                 icon={["far", "external-link"]}
                 className="ml-2"
               />
-            </button>
+            </a>
           </div>
-        </a>
+        </div>
         <div className="px-3 pt-2 pb-3 bg-white flex justify-between items-center border-t-2 border-gray-200">
           <span>
             <div className="mb-1">
@@ -151,13 +151,11 @@ const PortfolioCard = ({
             <div className="text-sm text-gray-500">{technologies}</div>
           </span>
           <span>
-            {showSiteLinkIcon && (
-              <SocialIcon
-                href={siteLink}
-                className="text-black hover:text-indigo-400 px-0 text-sm"
-                icon={["far", "external-link"]}
-              />
-            )}
+            <SocialIcon
+              href={siteLink}
+              className="lg:hidden text-black hover:text-indigo-400 px-0 text-sm"
+              icon={["far", "external-link"]}
+            />
             {githubLink && (
               <SocialIcon
                 href={githubLink}

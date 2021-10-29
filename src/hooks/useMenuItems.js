@@ -11,9 +11,9 @@ export default function useMenuItems() {
       pathname: "/portfolio",
     },
     {
-      name: "Tools",
-      icon: "tools",
-      pathname: "/tools",
+      name: "Blog",
+      icon: "file-alt",
+      pathname: "/blog",
     },
   ];
 }

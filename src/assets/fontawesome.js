@@ -9,6 +9,7 @@ import {
   faHouse as fasHouse,
   faBriefcase as fasBriefcase,
   faTools as fasTools,
+  faFileAlt as fasFileAlt,
 } from "@fortawesome/pro-solid-svg-icons";
 import {
   faLongArrowAltRight,
@@ -34,6 +35,7 @@ import {
   faHouse as falHouse,
   faBriefcase as falBriefcase,
   faTools as falTools,
+  faFileAlt as falFileAlt,
 } from "@fortawesome/pro-light-svg-icons";
 import {
   faGithub,
@@ -42,6 +44,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
+  fasFileAlt,
+  falFileAlt,
   faExternalLink,
   fasTools,
   falTools,
