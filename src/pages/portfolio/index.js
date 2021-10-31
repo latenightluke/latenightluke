@@ -56,12 +56,6 @@ export default function index() {
                 {tech}
               </Badge>
             ))}
-            <div className="md:hidden">
-              <FontAwesomeIcon
-                icon={["far", "angle-down"]}
-                className="text-2xl text-gray-700"
-              />
-            </div>
           </div>
         </div>
 

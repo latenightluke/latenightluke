@@ -13,7 +13,7 @@ export default function ProjectCard({
   githubLink,
 }) {
   return (
-    <div className="rounded-lg overflow-hidden border-2 border-black dark:border-2 dark:border-indigo-400 bg-indigo-900">
+    <div className="rounded-lg overflow-hidden border-2 border-black dark:border-2 dark:border-indigo-900 bg-indigo-900">
       <div className="flex flex-col">
         <div className={`group h-52 ${bgClassName} bg-cover bg-center`}>
           <div className="hidden lg:flex items-center justify-center bg-black w-full h-full bg-opacity-0 group-hover:bg-opacity-90">
@@ -53,15 +53,16 @@ export default function ProjectCard({
             <div className="text-sm text-gray-500">{technologies}</div>
           </span>
           <span>
-            <SocialIcon
+            <IconButton
               href={siteLink}
-              className="lg:hidden text-black hover:text-indigo-400 px-0 text-sm"
+              className="lg:hidden text-black hover:text-indigo-400 text-sm"
               icon={["far", "external-link"]}
+              size="text-xl"
             />
             {githubLink && (
-              <SocialIcon
+              <IconButton
                 href={githubLink}
-                className="text-black hover:text-indigo-400 px-0"
+                className="text-black hover:text-indigo-400 px-0 ml-3"
                 icon={["fab", "github"]}
               />
             )}
@@ -71,3 +72,19 @@ export default function ProjectCard({
     </div>
   );
 }
+
+const IconButton = ({ href, icon, size = "text-2xl", className }) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      className={`px-1 py-4 cursor-pointer ${
+        className
+          ? className
+          : "text-gray-600 hover:text-gray-400 active:text-indigo-400"
+      }`}
+    >
+      <FontAwesomeIcon icon={icon} className={size} />
+    </a>
+  );
+};

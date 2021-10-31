@@ -24,12 +24,12 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center lg:flex-row">
             <Button
               href="mailto:inquiries@latenightluke.dev"
-              icon={["far", "envelope"]}
-              className="mb-3 mr-3"
+              icon={["fab", "linkedin"]}
+              className="mb-3 mr-0 lg:mr-3"
               link
               external
             >
-              Email Me
+              Message Me
             </Button>
             <Button
               href="/portfolio"
