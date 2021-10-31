@@ -31,10 +31,16 @@ export default function index() {
                 {tech}
               </Badge>
             ))}
+            <div className="text-center md:hidden">
+              <FontAwesomeIcon
+                icon={["far", "long-arrow-down"]}
+                className="text-2xl text-gray-700"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="max-w-screen-xl mx-auto pt-6 lg:pt-20 px-6">
+        <div className="max-w-screen-xl mx-auto pt-6 pb-6 lg:pt-20 px-6">
           <div className="flex flex-col">
             <div className="text-center">
               <PageTitle>Projects</PageTitle>
