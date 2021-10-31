@@ -14,7 +14,7 @@ export default function Home() {
         <Head>
           <title>Late Night Luke</title>
         </Head>
-        <div className="flex flex-col items-center justify-center w-full flex-1 text-center pt-6 px-6 pb-20 md:px-10 md:pb-10 h-full">
+        <div className="flex flex-col items-center justify-center w-full flex-1 text-center p-6 md:px-10 md:pb-10">
           <Avatar />
           <Title>Late Night Luke</Title>
           <Subhead>
@@ -23,7 +23,7 @@ export default function Home() {
           </Subhead>
           <div className="flex flex-col items-center justify-center lg:flex-row">
             <Button
-              href="mailto:inquiries@latenightluke.dev"
+              href="https://www.linkedin.com/in/luke-ivie/"
               icon={["fab", "linkedin"]}
               className="mb-3 mr-0 lg:mr-3"
               link
