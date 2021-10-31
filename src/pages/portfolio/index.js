@@ -20,26 +20,6 @@ export default function index() {
       </Head>
 
       <div>
-        <div className="max-w-screen-lg mx-auto pt-6 pb-6 lg:pt-20 px-6">
-          <div className="text-center">
-            <PageTitle>Qualifications</PageTitle>
-            <Subhead className="mb-4">
-              A range of technologies and tools I am well-versed in.
-            </Subhead>
-            {technologies?.map((tech) => (
-              <Badge key={tech} color="indigo" size="sm">
-                {tech}
-              </Badge>
-            ))}
-            <div className="md:hidden">
-              <FontAwesomeIcon
-                icon={["far", "angle-down"]}
-                className="text-2xl text-gray-700"
-              />
-            </div>
-          </div>
-        </div>
-
         <div className="max-w-screen-xl mx-auto pt-6 pb-6 lg:pt-20 px-6">
           <div className="flex flex-col">
             <div className="text-center">
@@ -61,6 +41,26 @@ export default function index() {
                   githubLink={project?.githubLink}
                 />
               ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-screen-lg mx-auto pt-6 pb-6 lg:pt-20 px-6">
+          <div className="text-center">
+            <PageTitle>Skills</PageTitle>
+            <Subhead className="mb-4">
+              A range of technologies and tools I am well-versed in.
+            </Subhead>
+            {technologies?.map((tech) => (
+              <Badge key={tech} color="indigo" size="sm">
+                {tech}
+              </Badge>
+            ))}
+            <div className="md:hidden">
+              <FontAwesomeIcon
+                icon={["far", "angle-down"]}
+                className="text-2xl text-gray-700"
+              />
             </div>
           </div>
         </div>
