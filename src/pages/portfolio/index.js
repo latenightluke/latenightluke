@@ -4,7 +4,7 @@ import Image from "next/image";
 import Layout from "../../components/layout";
 import PageTitle from "../../components/page-title";
 import Subhead from "../../components/subhead";
-import SocialIcon from "../../components/social-icon";
+import ProjectCard from "../../components/project-card";
 import Badge from "../../components/badge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTechnologies, useProjects } from "../../hooks";
@@ -31,9 +31,9 @@ export default function index() {
                 {tech}
               </Badge>
             ))}
-            <div className="text-center md:hidden">
+            <div className="md:hidden">
               <FontAwesomeIcon
-                icon={["far", "long-arrow-down"]}
+                icon={["far", "angle-down"]}
                 className="text-2xl text-gray-700"
               />
             </div>
@@ -50,7 +50,7 @@ export default function index() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects?.map((project) => (
-                <PortfolioCard
+                <ProjectCard
                   key={project?.title}
                   title={project?.title}
                   badge={project?.badge}
@@ -105,76 +105,6 @@ export default function index() {
     </Layout>
   );
 }
-
-const PortfolioCard = ({
-  title,
-  badge,
-  isMainBadge,
-  technologies,
-  bgClassName,
-  siteLink,
-  showSiteLinkIcon,
-  githubLink,
-}) => {
-  return (
-    <div className="rounded-lg overflow-hidden border-2 border-black dark:border-2 dark:border-indigo-400 bg-indigo-900">
-      <div className="flex flex-col">
-        <div className={`group h-52 ${bgClassName} bg-cover bg-center`}>
-          <div className="hidden lg:flex items-center justify-center bg-black w-full h-full bg-opacity-0 group-hover:bg-opacity-90">
-            <a
-              href={siteLink}
-              target="_blank"
-              icon={["far", "external-link"]}
-              className="opacity-0 lg:group-hover:opacity-100 items-center justify-center rounded-full px-6 py-2
-              border-2 border-indigo-400
-              text-indigo-400 hover:text-black
-              bg-transparent hover:bg-indigo-400"
-            >
-              Visit Site
-              <FontAwesomeIcon
-                icon={["far", "external-link"]}
-                className="ml-2"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="px-3 pt-2 pb-3 bg-white flex justify-between items-center border-t-2 border-gray-200">
-          <span>
-            <div className="mb-1">
-              <span className="font-bold">{title}</span>
-              {badge && (
-                <span
-                  className={`ml-2 text-xs px-2 rounded-full ${
-                    isMainBadge
-                      ? "text-indigo-600 bg-indigo-50"
-                      : "text-gray-600 bg-gray-200"
-                  }`}
-                >
-                  {badge}
-                </span>
-              )}
-            </div>
-            <div className="text-sm text-gray-500">{technologies}</div>
-          </span>
-          <span>
-            <SocialIcon
-              href={siteLink}
-              className="lg:hidden text-black hover:text-indigo-400 px-0 text-sm"
-              icon={["far", "external-link"]}
-            />
-            {githubLink && (
-              <SocialIcon
-                href={githubLink}
-                className="text-black hover:text-indigo-400 px-0"
-                icon={["fab", "github"]}
-              />
-            )}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const GraphicCard = ({ src, width, height, className }) => {
   return (

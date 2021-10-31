@@ -32,6 +32,7 @@ import {
   faInfoCircle,
   faExternalLink,
   faBriefcase,
+  faAngleDown,
 } from "@fortawesome/pro-regular-svg-icons";
 import {
   faHouse as falHouse,
@@ -46,6 +47,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
+  faAngleDown,
   fasFileAlt,
   falFileAlt,
   faExternalLink,
