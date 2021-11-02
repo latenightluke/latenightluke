@@ -23,7 +23,6 @@ export default function useProjects() {
       technologies: "React • Bootstrap 4",
       bgClassName: "bg-younglukemusic",
       siteLink: "https://younglukemusic.com",
-      // githubLink: "https://github.com/latenightluke/younglukemusic",
     },
     {
       title: "Openforce",
