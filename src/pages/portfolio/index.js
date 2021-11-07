@@ -6,7 +6,6 @@ import PageTitle from "../../components/page-title";
 import Subhead from "../../components/subhead";
 import ProjectCard from "../../components/project-card";
 import Badge from "../../components/badge";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTechnologies, useProjects } from "../../hooks";
 
 export default function index() {

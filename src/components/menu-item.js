@@ -16,7 +16,7 @@ export default function MenuItem({ children, icon, to }) {
           active
             ? "text-indigo-400"
             : "text-gray-600 hover:text-gray-400 active:text-indigo-400"
-        } text-xl px-5 py-4`}
+        } text-xl px-3 lg:px-4 2xl:px-5 py-4`}
       >
         {icon && (
           <FontAwesomeIcon
