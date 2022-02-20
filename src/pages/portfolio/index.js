@@ -68,7 +68,20 @@ export default function index() {
             </div>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               <GraphicCard src="/graphics/1.gif" width={1200} height={3100} />
-              <GraphicCard src="/graphics/2.gif" width={1200} height={2292} />
+              <GraphicCardMultiple
+                srcs={[
+                  {
+                    src: "/graphics/8-1.gif",
+                    width: 1200,
+                    height: 1054,
+                  },
+                  {
+                    src: "/graphics/8-2.gif",
+                    width: 1200,
+                    height: 1116,
+                  },
+                ]}
+              />
               <GraphicCardMultiple
                 srcs={[
                   {
@@ -90,7 +103,7 @@ export default function index() {
               />
               <GraphicCard src="/graphics/5.gif" width={1200} height={1910} />
               <GraphicCard src="/graphics/7.gif" width={1200} height={1600} />
-              <GraphicCard src="/graphics/8.png" width={1200} height={2304} />
+              <GraphicCard src="/graphics/2.gif" width={1200} height={2292} />
               <GraphicCard src="/graphics/9.png" width={1200} height={2134} />
               <GraphicCard src="/graphics/10.gif" width={1200} height={2400} />
             </div>
