@@ -89,8 +89,10 @@ export default function index() {
                 ]}
               />
               <GraphicCard src="/graphics/5.gif" width={1200} height={1910} />
-              <GraphicCard src="/graphics/7.png" width={1200} height={2054} />
+              <GraphicCard src="/graphics/7.gif" width={1200} height={1600} />
               <GraphicCard src="/graphics/8.png" width={1200} height={2304} />
+              <GraphicCard src="/graphics/9.png" width={1200} height={2134} />
+              <GraphicCard src="/graphics/10.gif" width={1200} height={2400} />
             </div>
           </div>
         </div>
