@@ -106,6 +106,21 @@ export default function index() {
               <GraphicCard src="/graphics/2.gif" width={1200} height={2292} />
               <GraphicCard src="/graphics/9.png" width={1200} height={2134} />
               <GraphicCard src="/graphics/10.gif" width={1200} height={2400} />
+              <GraphicCardMultiple
+                srcs={[
+                  {
+                    src: "/graphics/11-1.gif",
+                    width: 1200,
+                    height: 332,
+                  },
+                  {
+                    src: "/graphics/11-2.png",
+                    width: 1200,
+                    height: 1668,
+                  },
+                ]}
+              />
+              <GraphicCard src="/graphics/12.gif" width={1200} height={2300} />
             </div>
           </div>
         </div>
@@ -121,6 +136,7 @@ const GraphicCard = ({ src, width, height, className }) => {
     </div>
   );
 };
+
 const GraphicCardMultiple = ({ srcs, className }) => {
   return (
     <div className={className}>
