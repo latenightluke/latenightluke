@@ -21,7 +21,7 @@ module.exports = {
       colors: {
         black: "#090B10",
         pitchBlack: "#000000",
-        gray: colors.coolGray,
+        gray: colors.gray,
         blue: {
           twitter: "#1da1f2",
         },
