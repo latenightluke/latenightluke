@@ -1,4 +1,4 @@
-# Late Night Luke
+# Luke Ivie
 
 I am a passionate Front-End Developer with a background in UI/UX. My primary experience is in Javascript, React, HTML, CSS, C#, and Elixir, but I am always open to learning new languages and tools. I am also proficient in graphics software, primarily Sketch, and the Adobe Software Suite.
 
