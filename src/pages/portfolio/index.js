@@ -1,11 +1,13 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+
 import Layout from "../../components/layout";
 import PageTitle from "../../components/page-title";
 import Subhead from "../../components/subhead";
 import ProjectCard from "../../components/project-card";
 import Badge from "../../components/badge";
+import Fancybox from "../../components/fancybox";
 import { useTechnologies, useProjects } from "../../hooks";
 
 export default function index() {
@@ -67,60 +69,30 @@ export default function index() {
               </Subhead>
             </div>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              <GraphicCard src="/graphics/1.gif" width={1200} height={3100} />
-              <GraphicCardMultiple
-                srcs={[
-                  {
-                    src: "/graphics/8-1.gif",
-                    width: 1200,
-                    height: 1054,
-                  },
-                  {
-                    src: "/graphics/8-2.gif",
-                    width: 1200,
-                    height: 1116,
-                  },
-                ]}
-              />
-              <GraphicCardMultiple
-                srcs={[
-                  {
-                    src: "/graphics/3-1.png",
-                    width: 1200,
-                    height: 256,
-                  },
-                  {
-                    src: "/graphics/3-2.gif",
-                    width: 1200,
-                    height: 1376,
-                  },
-                  {
-                    src: "/graphics/3-3.png",
-                    width: 1200,
-                    height: 1232,
-                  },
-                ]}
-              />
-              <GraphicCard src="/graphics/5.gif" width={1200} height={1910} />
-              <GraphicCard src="/graphics/7.gif" width={1200} height={1600} />
-              <GraphicCard src="/graphics/2.gif" width={1200} height={2292} />
-              <GraphicCard src="/graphics/9.png" width={1200} height={2134} />
-              <GraphicCard src="/graphics/10.gif" width={1200} height={2400} />
-              <GraphicCardMultiple
-                srcs={[
-                  {
-                    src: "/graphics/11-1.gif",
-                    width: 1200,
-                    height: 332,
-                  },
-                  {
-                    src: "/graphics/11-2.png",
-                    width: 1200,
-                    height: 1668,
-                  },
-                ]}
-              />
-              <GraphicCard src="/graphics/12.gif" width={1200} height={2300} />
+              <Fancybox>
+                <GraphicCard src="/graphics/1.gif" width={1200} height={3100} />
+                <GraphicCard src="/graphics/8.gif" width={1200} height={2170} />
+                <GraphicCard src="/graphics/3.gif" width={1200} height={2864} />
+                <GraphicCard src="/graphics/5.gif" width={1200} height={1910} />
+                <GraphicCard src="/graphics/7.gif" width={1200} height={1600} />
+                <GraphicCard src="/graphics/2.gif" width={1200} height={2292} />
+                <GraphicCard src="/graphics/9.png" width={1200} height={2134} />
+                <GraphicCard
+                  src="/graphics/10.gif"
+                  width={1200}
+                  height={2400}
+                />
+                <GraphicCard
+                  src="/graphics/11.gif"
+                  width={1200}
+                  height={2000}
+                />
+                <GraphicCard
+                  src="/graphics/12.gif"
+                  width={1200}
+                  height={2300}
+                />
+              </Fancybox>
             </div>
           </div>
         </div>
@@ -131,23 +103,14 @@ export default function index() {
 
 const GraphicCard = ({ src, width, height, className }) => {
   return (
-    <div className={className}>
-      <Image src={src} width={width} height={height} />
-    </div>
-  );
-};
-
-const GraphicCardMultiple = ({ srcs, className }) => {
-  return (
-    <div className={className}>
-      {srcs?.map((src) => (
-        <img
-          key={src.src}
-          src={src.src}
-          width={src.width}
-          height={src.height}
-        />
-      ))}
+    <div className={className} style={{ cursor: "zoom-in" }}>
+      <Image
+        src={src}
+        width={width}
+        height={height}
+        data-fancybox="gallery"
+        data-src={src}
+      />
     </div>
   );
 };
