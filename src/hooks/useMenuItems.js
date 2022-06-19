@@ -1,8 +1,8 @@
 export default function useMenuItems() {
   return [
     {
-      name: "Home",
-      icon: "house",
+      name: "Lobby",
+      icon: "hotel",
       pathname: "/",
     },
     {

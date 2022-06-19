@@ -7,6 +7,10 @@
   color: #000000;
 }
 
+html {
+  background: #090B10;
+}
+
 .bg-latenightluke {
   background-image: url("/bg/latenightluke-og.png") !important;
 }

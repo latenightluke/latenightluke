@@ -10,6 +10,11 @@ import {
   faBriefcase as fasBriefcase,
   faTools as fasTools,
   faFileAlt as fasFileAlt,
+  faHotel as fasHotel,
+  faLaptopCode as fasLaptopCode,
+  faSunset as fasSunset,
+  faSun as fasSun,
+  faSunglasses as fasSunglasses,
 } from "@fortawesome/pro-solid-svg-icons";
 import {
   faLongArrowAltRight,
@@ -33,12 +38,18 @@ import {
   faExternalLink,
   faBriefcase,
   faAngleDown,
+  faHotel,
 } from "@fortawesome/pro-regular-svg-icons";
 import {
   faHouse as falHouse,
   faBriefcase as falBriefcase,
   faTools as falTools,
   faFileAlt as falFileAlt,
+  faHotel as falHotel,
+  faLaptopCode as falLaptopCode,
+  faSunset as falSunset,
+  faSun as falSun,
+  faSunglasses as falSunglasses,
 } from "@fortawesome/pro-light-svg-icons";
 import {
   faGithub,
@@ -47,6 +58,17 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
+  falSunglasses,
+  fasSunglasses,
+  falSun,
+  fasSun,
+  fasSunset,
+  falSunset,
+  falLaptopCode,
+  fasLaptopCode,
+  falHotel,
+  faHotel,
+  fasHotel,
   faAngleDown,
   fasFileAlt,
   falFileAlt,

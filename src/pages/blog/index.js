@@ -11,7 +11,7 @@ export default function index() {
       </Head>
       <div className="flex flex-col text-center max-w-screen-xl mx-auto p-6 text-gray-900 dark:text-white">
         <PageTitle>Blog</PageTitle>
-        <p className="text-gray-200 dark:text-indigo-400 text-xl">
+        <p className="text-gray-900 dark:text-indigo-400 text-xl">
           Coming Soon
         </p>
       </div>

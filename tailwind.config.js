@@ -21,11 +21,12 @@ module.exports = {
       colors: {
         black: "#090B10",
         pitchBlack: "#000000",
-        gray: colors.gray,
+        gray: colors.slate,
         blue: {
           twitter: "#1da1f2",
         },
         indigo: colors.indigo,
+        fuchsia: colors.fuchsia,
       },
       screens: {
         xs: "390px",
@@ -33,7 +34,12 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ["dark"],
+      borderColor: ["dark"],
+      borderWidth: ["dark"],
+      textColor: ["active"],
+    },
   },
   plugins: [],
 };

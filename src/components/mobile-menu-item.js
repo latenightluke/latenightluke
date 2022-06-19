@@ -9,7 +9,7 @@ export default function MobileMenuItem({ children, icon, to }) {
 
   return (
     <Link href={to}>
-      <a className="group flex flex-col flex-grow justify-center items-center text-xl py-3">
+      <a className="bg-black group flex flex-col flex-grow justify-center items-center text-xl py-3">
         <FontAwesomeIcon
           icon={[active ? "fas" : "fal", icon]}
           className={`${

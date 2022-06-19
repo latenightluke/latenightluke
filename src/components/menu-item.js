@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import classNames from "classnames";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -12,16 +13,16 @@ export default function MenuItem({ children, icon, to }) {
   return (
     <Link href={to}>
       <a
-        className={`${
-          active
-            ? "text-indigo-400"
-            : "text-gray-600 hover:text-gray-400 active:text-indigo-400"
-        } text-xl px-3 lg:px-4 2xl:px-5 py-4`}
+        className={classNames("text-xl pr-8 py-4", {
+          "text-indigo-500 dark:text-indigo-500": active,
+          "text-gray-600 hover:text-gray-400 active:text-indigo-500 dark:active:text-indigo-500":
+            !active,
+        })}
       >
         {icon && (
           <FontAwesomeIcon
             icon={[active ? "fas" : "fal", icon]}
-            className="mr-2 hidden xl:inline-block"
+            className="mr-2 inline-block"
           />
         )}
         <span className="hidden lg:inline-flex">{children}</span>

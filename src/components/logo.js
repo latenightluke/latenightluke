@@ -1,19 +1,29 @@
 import React from "react";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
-export default function logo() {
+import normalLogo from "../../public/logo/normal.svg";
+import sunsetLogo from "../../public/logo/sunset.svg";
+
+export default function logo({ width = 100, height = 129 }) {
   return (
-    <Link href="/">
-      <a href="/" className="inline-flex items-center px-3 py-4 lg:py-4">
-        <FontAwesomeIcon
-          icon={["fas", "city"]}
-          className="mr-3 text-indigo-400 text-2xl"
+    <>
+      <span className="hidden dark:flex">
+        <Image
+          src={normalLogo}
+          width={width}
+          height={height}
+          alt="Late Night Luke"
         />
-        <span className="hidden xs:inline-block text-white font-extrabold italic text-3xl">
-          LNL
-        </span>
-      </a>
-    </Link>
+      </span>
+      <span className="flex dark:hidden">
+        <Image
+          src={sunsetLogo}
+          width={width}
+          height={height}
+          alt="Late Night Luke"
+          className="flex dark:hidden"
+        />
+      </span>
+    </>
   );
 }

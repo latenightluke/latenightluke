@@ -1,11 +1,14 @@
 export default function useTechnologies() {
   return [
     "Javascript",
+    "Node",
+    "Express",
     "React",
-    "React Router",
     "Redux",
-    "Rest APIs",
+    "REST",
     "GraphQL",
+    "MongoDB",
+    "PostgreSQL",
     "HTML",
     "NextJS",
     "Bootstrap",
@@ -13,9 +16,9 @@ export default function useTechnologies() {
     "CSS",
     "SCSS",
     "Elixir",
-    ".Net",
     "C#",
     "Wordpress",
+    "Figma",
     "Sketch",
     "Photoshop",
   ];
